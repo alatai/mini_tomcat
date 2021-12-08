@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <Server>：サーバ自体 -->
+<Server>
+    <!-- <Service>：Tomcatのサービス，複数のConnectorがある -->
+    <Service name="Catalina">
+        <!-- <Connector>：複数のポートの設定は可能にある -->
+        <!-- compression：圧縮するか、onはOK -->
+        <!-- compressionMinSize：圧縮のバイト数（一般的は1024) -->
+        <!-- noCompressibleUserAgents：圧縮できないブラウザ -->
+        <!-- compressibleMimeType：圧縮するmimeType -->
+        <Connector port="8088"
+                   compression="on"
+                   compressionMinSize="20"
+                   noCompressibleUserAgents="gozilla, traviata"
+                   compressibleMimeType="text/html,text/xml,text/javascript,application/javascript,text/css,text/plain,text/json"/>
+        <Connector port="8089"/>
+        <Connector port="8090"/>
+
+        <!-- <Engine>：Servletのエンジン、Servletの請求を処理する -->
+        <!-- defaultHost：デフォールトホスト“localhost” -->
+        <Engine defaultHost="localhost">
+            <!-- <Host>：バーチャルホスト、<Engine>要素の下で複数の設定は可能です -->
+            <!-- name：バーチャルホストの名前 -->
+            <Host name="localhost">
+                <!-- <Context>：Tomcat配置ファイル中で最も使われている要素、アプリを代表している -->
+                <!-- path：請求のURL -->
+                <!-- docBase：ウェブアプリケーションのパス、絶対パスで表示する -->
+                <Context path="/b" docBase="/Users/qipeng/IdeaProjects/mini_tomcat/b"/>
+                <Context path="/web4test" docBase="/Users/qipeng/IdeaProjects/web4test/web"/>
+            </Host>
+        </Engine>
+    </Service>
+</Server>
+
