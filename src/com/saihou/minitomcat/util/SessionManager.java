@@ -91,7 +91,7 @@ public class SessionManager {
     }
 
     /**
-     * session下のcookieを作成する
+     * jsessionidを基にcookieを作成する
      */
     private static void createCookieBySession(HttpSession session, Request request, Response response) {
         Cookie cookie = new Cookie("JSESSIONID", session.getId());
