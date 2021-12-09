@@ -254,7 +254,7 @@ public class Request extends BaseRequest {
         String cookies = headerMap.get("cookie");
 
         if (cookies != null) {
-            List<String> pairs = StrUtil.split(cookies, ":");
+            List<String> pairs = StrUtil.split(cookies, ";");
 
             for (String pair : pairs) {
                 if (StrUtil.isBlank(pair)) {
