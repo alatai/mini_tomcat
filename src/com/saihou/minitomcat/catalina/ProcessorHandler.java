@@ -5,6 +5,7 @@ import cn.hutool.core.util.StrUtil;
 import cn.hutool.log.LogFactory;
 import com.saihou.minitomcat.http.Request;
 import com.saihou.minitomcat.http.Response;
+import com.saihou.minitomcat.servlet.JspServlet;
 import com.saihou.minitomcat.servlet.StaticServlet;
 import com.saihou.minitomcat.servlet.DynamicServlet;
 import com.saihou.minitomcat.util.Constant;
@@ -37,9 +38,12 @@ public class ProcessorHandler {
             Context context = request.getContext();
             String servletClassName = context.getServletClassName(uri);
 
+            // Servlet処理
             if (servletClassName != null) {
                 DynamicServlet.getInstance().service(request, response);
-            } else {
+            } else if (uri.endsWith(".jsp")) { // jsp処理
+                JspServlet.getInstance().service(request, response);
+            } else { // 静的なリソース
                 StaticServlet.getInstance().service(request, response);
             }
 

@@ -95,8 +95,10 @@ public class Context {
         LogFactory.get().info("Deployment of web application directory {} " +
                 "has finished in {} ms", this.docBase, timeInterval.intervalMs());
 
-        JspC c = new JspC();
-        new JspRuntimeContext(servletContext, c);
+        // JspRunちめContextの初期化
+        // javax.servlet.jsp.JspFactory.getDefaultFactory()を実行する時リターン値がある
+        JspC jspC = new JspC();
+        new JspRuntimeContext(servletContext, jspC);
     }
 
     /**

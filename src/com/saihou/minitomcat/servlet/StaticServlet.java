@@ -50,6 +50,11 @@ public class StaticServlet extends HttpServlet {
             uri = WebXmlUtil.getWelcomeFile(request.getContext());
         }
 
+        if (uri.endsWith(".jsp")) {
+            JspServlet.getInstance().service(request, response);
+            return;
+        }
+
         String filename = StrUtil.removePrefix(uri, "/");
         File file = FileUtil.file(request.getRealPath(filename));
 
