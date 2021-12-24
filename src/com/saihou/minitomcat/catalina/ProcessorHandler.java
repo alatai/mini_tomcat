@@ -5,9 +5,9 @@ import cn.hutool.core.util.StrUtil;
 import cn.hutool.log.LogFactory;
 import com.saihou.minitomcat.http.Request;
 import com.saihou.minitomcat.http.Response;
+import com.saihou.minitomcat.servlet.DefaultServlet;
 import com.saihou.minitomcat.servlet.JspServlet;
-import com.saihou.minitomcat.servlet.StaticServlet;
-import com.saihou.minitomcat.servlet.DynamicServlet;
+import com.saihou.minitomcat.servlet.StandardServlet;
 import com.saihou.minitomcat.util.Constant;
 import com.saihou.minitomcat.util.SessionManager;
 
@@ -40,11 +40,11 @@ public class ProcessorHandler {
 
             // Servlet処理
             if (servletClassName != null) {
-                DynamicServlet.getInstance().service(request, response);
+                StandardServlet.getInstance().service(request, response);
             } else if (uri.endsWith(".jsp")) { // jsp処理
                 JspServlet.getInstance().service(request, response);
             } else { // 静的なリソース
-                StaticServlet.getInstance().service(request, response);
+                DefaultServlet.getInstance().service(request, response);
             }
 
             // HTTP状態コードで静的な資源を処理する

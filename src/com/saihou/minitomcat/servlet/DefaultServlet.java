@@ -22,15 +22,15 @@ import java.io.IOException;
  * @version 1.0
  * @date 2021/11/21 18:09
  */
-public class StaticServlet extends HttpServlet {
+public class DefaultServlet extends HttpServlet {
 
-    private static final StaticServlet STATIC_SERVLET = new StaticServlet();
+    private static final DefaultServlet STATIC_SERVLET = new DefaultServlet();
 
-    private StaticServlet() {
+    private DefaultServlet() {
 
     }
 
-    public static StaticServlet getInstance() {
+    public static DefaultServlet getInstance() {
         return STATIC_SERVLET;
     }
 
