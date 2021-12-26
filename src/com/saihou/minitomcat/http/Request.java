@@ -158,8 +158,7 @@ public class Request extends BaseRequest {
      * GET /index.html?name=green HTTP/1.1 -> /index.html?name=green
      */
     private void parseUri() {
-        String temp;
-        temp = StrUtil.subBetween(requestString, " ", " ");
+        String temp = StrUtil.subBetween(requestString, " ", " ");
 
         if (!StrUtil.contains(temp, '?')) {
             uri = temp;
