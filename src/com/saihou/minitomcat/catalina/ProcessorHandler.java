@@ -7,7 +7,7 @@ import com.saihou.minitomcat.http.Request;
 import com.saihou.minitomcat.http.Response;
 import com.saihou.minitomcat.servlet.DefaultServlet;
 import com.saihou.minitomcat.servlet.JspServlet;
-import com.saihou.minitomcat.servlet.StandardServlet;
+import com.saihou.minitomcat.servlet.InvokeServlet;
 import com.saihou.minitomcat.util.Constant;
 import com.saihou.minitomcat.util.SessionManager;
 
@@ -40,7 +40,7 @@ public class ProcessorHandler {
 
             // Servlet処理
             if (servletClassName != null) {
-                StandardServlet.getInstance().service(request, response);
+                InvokeServlet.getInstance().service(request, response);
             } else if (uri.endsWith(".jsp")) { // jsp処理
                 JspServlet.getInstance().service(request, response);
             } else { // 静的なリソース

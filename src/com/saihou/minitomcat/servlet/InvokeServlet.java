@@ -17,16 +17,16 @@ import javax.servlet.http.HttpServletResponse;
  * @version 1.0
  * @date 2021/11/21 15:37
  */
-public class StandardServlet extends HttpServlet {
+public class InvokeServlet extends HttpServlet {
 
-    private static final StandardServlet DYNAMIC_SERVLET = new StandardServlet();
+    private static final InvokeServlet DYNAMIC_SERVLET = new InvokeServlet();
 
     // singleton
-    private StandardServlet() {
+    private InvokeServlet() {
 
     }
 
-    public static StandardServlet getInstance() {
+    public static InvokeServlet getInstance() {
         return DYNAMIC_SERVLET;
     }
 
