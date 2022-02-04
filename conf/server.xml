@@ -25,7 +25,6 @@
                 <!-- <Context>：Tomcat配置ファイル中で最も使われている要素、アプリを代表している -->
                 <!-- path：請求のURL -->
                 <!-- docBase：ウェブアプリケーションのパス、絶対パスで表示する -->
-                <Context path="/b" docBase="/Users/qipeng/IdeaProjects/mini_tomcat/b"/>
                 <Context path="/web4test" docBase="/Users/qipeng/IdeaProjects/web4test/web"/>
             </Host>
         </Engine>

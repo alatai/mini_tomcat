@@ -30,7 +30,7 @@ public class Constant {
 
     public final static String RESPONSE_HEADER_404 = "HTTP/1.1 404 Not Found\r\n"
             + "Content-Type: text/html\r\n\r\n";
-    public final static String TEXT_FORMAT_404 = "<html><head><title>DIY Tomcat/1.0.1 - Error report</title><style>"
+    public final static String TEXT_FORMAT_404 = "<html><head><title>MiniServletContainer/1.0.0 - Error report</title><style>"
             + "<!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} "
             + "H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} "
             + "H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} "
@@ -40,11 +40,11 @@ public class Constant {
             + "A {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> "
             + "</head><body><h1>HTTP Status 404 - {}</h1>"
             + "<HR size='1' noshade='noshade'><p><b>type</b> Status report</p><p><b>message</b> <u>{}</u></p><p><b>description</b> "
-            + "<u>The requested resource is not available.</u></p><HR size='1' noshade='noshade'><h3>DiyTocmat 1.0.1</h3>" + "</body></html>";
+            + "<u>The requested resource is not available.</u></p><HR size='1' noshade='noshade'><h3>MiniServletContainer 1.0.0</h3>" + "</body></html>";
 
     public final static String RESPONSE_HEADER_500 = "HTTP/1.1 500 Internal Server Error\r\n"
             + "Content-Type: text/html\r\n\r\n";
-    public final static String TEXT_FORMAT_500 = "<html><head><title>DIY Tomcat/1.0.1 - Error report</title><style>"
+    public final static String TEXT_FORMAT_500 = "<html><head><title>MiniServletContainer/1.0.0 - Error report</title><style>"
             + "<!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} "
             + "H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} "
             + "H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} "
@@ -55,7 +55,7 @@ public class Constant {
             + "</head><body><h1>HTTP Status 500 - An exception occurred processing {}</h1>"
             + "<HR size='1' noshade='noshade'><p><b>type</b> Exception report</p><p><b>message</b> <u>An exception occurred processing {}</u></p><p><b>description</b> "
             + "<u>The server encountered an internal error that prevented it from fulfilling this request.</u></p>"
-            + "<p>Stacktrace:</p>" + "<pre>{}</pre>" + "<HR size='1' noshade='noshade'><h3>DiyTocmat 1.0.1</h3>"
+            + "<p>Stacktrace:</p>" + "<pre>{}</pre>" + "<HR size='1' noshade='noshade'><h3>MiniServletContainer 1.0.0</h3>"
             + "</body></html>";
 
     // webapps パス
